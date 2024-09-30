@@ -1,11 +1,13 @@
 import { Route, BrowserRouter , Routes } from "react-router-dom"
-import App from "./App"
+import { Article, Home, NotFound } from "./pages"
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/article/:id" element={<Article />} />
+          <Route path="*" element={<NotFound />} />
       </Routes>
   </BrowserRouter>
   )
