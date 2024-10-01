@@ -16,7 +16,7 @@ export const Card: React.FC<{ article: ArticleInterface, customClass?: string }>
       <div className="card_article_content">
         <div className="card_article_share">
           <a
-            href={`/article/${article.id}`}
+            href={`/${article.section}`}
             title={`Ver mas noticias en ${article.section}`}
             className="card_article_section"
           >
@@ -39,13 +39,13 @@ export const Card: React.FC<{ article: ArticleInterface, customClass?: string }>
         <div className="card_article_info">
           <h2 className="card_article_title">
             <a href={`/article/${article.id}`} title={article.title} target="_self">
-              {article.title}"
+              {article.title}
             </a>
           </h2>
           <div className="card_article_author">
             <p className="card_article_author_name">
               {'Por '}
-              <a href={`/article/${article.id}`} title={article.author!.name}>
+              <a href={`/author/${article.author!.name}`} title={article.author!.name}>
                 {article.author!.name} {article.author!.lastName}
               </a>
             </p>

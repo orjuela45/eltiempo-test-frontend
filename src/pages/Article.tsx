@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { ArticleService } from '../services'
 import { ArticleInterface } from '../interfaces'
+import { ArticleHeader } from '../components'
+import '../styles/Article.css'
 
 const Article = () => {
   const { id } = useParams()
@@ -22,16 +24,37 @@ const Article = () => {
   }, [])
 
   if (!article) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
 
   return (
-    <>
-      <h1>Article: {id} </h1>
-      <p>{article.title}</p>
-      <p>{article.author?.name}</p>
-      <p>{article.section}</p>
-    </>
+    <div className="article">
+      <ArticleHeader article={article} />
+      <div className="container">
+        <div className="main">
+          <div className="article_image">
+            <img src={article.image} alt="" />
+          </div>
+        </div>
+        <div className="aside">publicidad</div>
+      </div>
+      <div className="container">
+        <div className="aside">redes sociales</div>
+        <div className="main">
+          {article.contents.map((content, index) => {
+            switch (content.type) {
+              case 'paragraph':
+                return <p key={index}>{content.content}</p>
+              case 'image':
+                return <img key={index} src={content.content} alt="" />
+              default:
+                return null;
+            }
+          })}
+        </div>
+        <div className="aside">publicidad</div>
+      </div>
+    </div>
   )
 }
 

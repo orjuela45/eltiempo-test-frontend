@@ -1,0 +1,61 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1220px;
+}
+
+.article_header {
+  display: contents;
+  padding: 16px;
+  text-align: center;
+}
+
+.article_section {
+  text-transform: uppercase;
+  font: bold .813rem / 1 'Acto', sans serif;
+  color: #D6030A;
+  display: inline-block;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.article_title {
+  font-size: 56px;
+  margin-bottom: 20px;
+  line-height: 1.14;
+  font-weight: bold;
+}
+
+.article_title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article_author {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #999;
+  margin-top: 40px;
+}
+
+.article_author_name {
+  margin-right: 8px;
+}
+
+.article_author_name a {
+  text-decoration: none;
+  color: #999;
+}
+
+.article_date {
+  font-size: 12px;
+  color: #999;
+}
+
+.article_image img {
+  width: 100%;
+}

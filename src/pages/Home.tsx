@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       </div>
       <div className='container'>
-        <div className="main2">
+        <div className="main">
           {articlesContainer2.map((article) => (
             <Card article={article} customClass={'card_article_horizontal_left'} key={article.id} />
           ))}
