@@ -1,13 +1,13 @@
 import moment from "moment";
-import { ArticleInterface } from '../../../interfaces'
-import '../../../styles/cardsArticle.css'
+import { ArticleInterface } from '../../interfaces'
+import '../../styles/cardsArticle.css'
 
-export const LittleCard: React.FC<{ article: ArticleInterface }> = ({
-  article,
+export const Card: React.FC<{ article: ArticleInterface, customClass?: string }> = ({
+  article, customClass
 }) => {
 
   return (
-    <article className="card_article">
+    <article className={`card_article ${customClass}`}>
       <figure className="card_article_img">
         <a href="#" title={article.title} target="_self">
           <img src={article.image} alt="" />

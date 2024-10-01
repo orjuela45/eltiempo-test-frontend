@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { LittleCard } from '../components'
+import { Card } from '../components'
 import { ArticleInterface } from '../interfaces'
 import { ArticleService } from '../services'
 import '../styles/home.css'
@@ -29,10 +29,10 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className='container' style={{ backgroundColor: 'red'}}>
+      <div className='container'>
         <div className="main">
           {articles.map((article, index) => (
-            <LittleCard article={article} />
+            <Card article={article} customClass={index === 0 ? 'card_article_horizontal' : ''} />
           ))}
         </div>
         <div className="aside">

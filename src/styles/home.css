@@ -3,16 +3,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  width: 90%;
+  width: 70%;
 }
 
 .home .container .main {
-  background-color: violet;
   width: 80%;
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  gap: 20px;
+}
+
+.home .container .aside {
+  display: flex;
+  width: 20%;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
 }
