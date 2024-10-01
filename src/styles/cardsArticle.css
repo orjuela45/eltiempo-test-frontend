@@ -2,7 +2,7 @@
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 290px;
+  width: 300px;
   border-radius: 8px;
 }
 
@@ -75,4 +75,17 @@
 
 .card_article_horizontal .card_article_info {
   width: 300px;
+}
+
+.card_article_horizontal_left {
+  display: flex; 
+  flex-direction: row;
+  width: 100%; 
+  margin: 0;
+  justify-content: flex-start;
+}
+
+.card_article_horizontal_left .card_article_img img {
+  max-width: 300px;
+  min-width: 300px;
 }
