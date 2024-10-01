@@ -1,8 +1,10 @@
+import moment from "moment";
 import { ArticleInterface } from '../../../interfaces'
 
 export const LittleCard: React.FC<{ article: ArticleInterface }> = ({
   article,
 }) => {
+
   return (
     <article className="news news--summary">
       <figure className="news__media">
@@ -33,21 +35,21 @@ export const LittleCard: React.FC<{ article: ArticleInterface }> = ({
           {article.section}
         </a>
         <h2 className="news__title">
-          <a href="#" title="{article.title}" target="_self">
+          <a href="#" title={article.title} target="_self">
             {article.title}"
           </a>
         </h2>
         <div className="news__line clearfix">
           <p className="news__author">
-            Por
+            {'Por '}
             <a href="#" title={article.author!.name}>
-              {article.author!.name}
+              {article.author!.name} {article.author!.lastName}
             </a>
           </p>
           <span className="news__line--sep">-</span>
 
           <time className="newsfull__time">
-            {article.createdAt!.toString().substring(0, 10)}
+            {moment(article.createdAt).format('D [de] MMMM [de] YYYY')}
           </time>
         </div>
       </div>
