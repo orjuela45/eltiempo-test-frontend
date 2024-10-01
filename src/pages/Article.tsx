@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { ArticleService } from '../services'
 import { ArticleInterface } from '../interfaces'
-import { ArticleHeader } from '../components'
+import { ArticleHeader, Paragraph } from '../components'
 import '../styles/Article.css'
 
 const Article = () => {
@@ -39,16 +39,16 @@ const Article = () => {
         <div className="aside">publicidad</div>
       </div>
       <div className="container">
-        <div className="aside">redes sociales</div>
+        <div className="networks">redes sociales</div>
         <div className="main">
           {article.contents.map((content, index) => {
             switch (content.type) {
               case 'paragraph':
-                return <p key={index}>{content.content}</p>
+                return <Paragraph key={index}> {content.content}</Paragraph>
               case 'image':
                 return <img key={index} src={content.content} alt="" />
               default:
-                return null;
+                return null
             }
           })}
         </div>
