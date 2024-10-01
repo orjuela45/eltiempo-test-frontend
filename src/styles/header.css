@@ -14,15 +14,6 @@ header svg {
   fill: white;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 90px;
-  width: 100%;
-  max-width: 1220px;
-}
-
 .header_menu {
   display: flex;
   align-items: center;
@@ -34,5 +25,10 @@ header svg {
 .header_logo{
   top: 0;
   width: 250px;
+}
+
+header .container {
+  max-width: 1220px;
+  justify-content: space-between;
 }
 

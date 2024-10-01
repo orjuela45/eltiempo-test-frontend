@@ -1,3 +1,18 @@
-.home{
-  background-color: aqua;
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 90%;
+}
+
+.home .container .main {
+  background-color: violet;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
 }

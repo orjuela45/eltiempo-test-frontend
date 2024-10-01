@@ -29,10 +29,16 @@ const Home = () => {
 
   return (
     <div className="home">
-
-      {articles.map((article) => (
-        <LittleCard article={article} />
-      ))}
+      <div className='container' style={{ backgroundColor: 'red'}}>
+        <div className="main">
+          {articles.map((article, index) => (
+            <LittleCard article={article} />
+          ))}
+        </div>
+        <div className="aside">
+          publicidad
+        </div>
+      </div>
     </div>
   )
 }
