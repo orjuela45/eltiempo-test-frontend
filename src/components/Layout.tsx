@@ -1,6 +1,6 @@
-import Header from './Header'
+import { Header } from './'
 
-const Layout: React.FC<{children: React.ReactNode}> = ({ children }) => {
+export const Layout: React.FC<{children: React.ReactNode}> = ({ children }) => {
   return (
     <div>
       <Header />
@@ -8,5 +8,3 @@ const Layout: React.FC<{children: React.ReactNode}> = ({ children }) => {
     </div>
   )
 }
-
-export default Layout

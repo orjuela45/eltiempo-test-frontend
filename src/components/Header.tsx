@@ -1,4 +1,4 @@
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="header__top">
@@ -193,5 +193,3 @@ const Header: React.FC = () => {
     </header>
   )
 }
-
-export default Header
