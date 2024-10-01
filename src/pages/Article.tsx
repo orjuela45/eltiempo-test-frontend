@@ -29,7 +29,6 @@ const Article = () => {
     <>
       <h1>Article: {id} </h1>
       <p>{article.title}</p>
-      <p>{article.contents}</p>
       <p>{article.author?.name}</p>
       <p>{article.section}</p>
     </>

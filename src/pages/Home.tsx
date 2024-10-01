@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(() => {
     const getArticles = async () => {
-      const articles = await articleService.getArticles()
+      const articles = await articleService.getArticles({limit: 7, offset: 0})
       if (articles.error) setError(true)
       setArticles(articles)
     }
@@ -32,7 +32,7 @@ const Home = () => {
       <div className='container'>
         <div className="main">
           {articles.map((article, index) => (
-            <Card article={article} customClass={index === 0 ? 'card_article_horizontal' : ''} />
+            <Card article={article} customClass={index === 0 ? 'card_article_horizontal' : ''} key={article.id} />
           ))}
         </div>
         <div className="aside">

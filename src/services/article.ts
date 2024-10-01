@@ -1,4 +1,5 @@
 import { FetchClient } from "../classes"
+import { PaginationInterface } from "../interfaces"
 
 export class ArticleService {
 
@@ -8,7 +9,7 @@ export class ArticleService {
     return await this.httpClient.get(id.toString())
   }
 
-  async getArticles() {
-    return await this.httpClient.get()
+  async getArticles(pagination?: PaginationInterface) {
+    return await this.httpClient.get('', pagination || {})
   }
 }

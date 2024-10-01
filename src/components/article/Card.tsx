@@ -9,14 +9,14 @@ export const Card: React.FC<{ article: ArticleInterface, customClass?: string }>
   return (
     <article className={`card_article ${customClass}`}>
       <figure className="card_article_img">
-        <a href="#" title={article.title} target="_self">
+        <a href={`/article/${article.id}`} title={article.title} target="_self">
           <img src={article.image} alt="" />
         </a>
       </figure>
       <div className="card_article_content">
         <div className="card_article_share">
           <a
-            href="#"
+            href={`/article/${article.id}`}
             title={`Ver mas noticias en ${article.section}`}
             className="card_article_section"
           >
@@ -38,14 +38,14 @@ export const Card: React.FC<{ article: ArticleInterface, customClass?: string }>
         </div>
         <div className="card_article_info">
           <h2 className="card_article_title">
-            <a href="#" title={article.title} target="_self">
+            <a href={`/article/${article.id}`} title={article.title} target="_self">
               {article.title}"
             </a>
           </h2>
           <div className="card_article_author">
             <p className="card_article_author_name">
               {'Por '}
-              <a href="#" title={article.author!.name}>
+              <a href={`/article/${article.id}`} title={article.author!.name}>
                 {article.author!.name} {article.author!.lastName}
               </a>
             </p>
