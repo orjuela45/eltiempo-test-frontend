@@ -1,11 +1,12 @@
+import '../styles/header.css'
+
 export const Header: React.FC = () => {
   return (
-    <header className="header">
-      <div className="header__top">
+    <header>
         <div className="container">
           <button
             type="button"
-            className="header__menu"
+            className="header_menu"
             aria-label="Abrir menú"
           >
             <svg
@@ -19,7 +20,7 @@ export const Header: React.FC = () => {
             </svg>
             <span>Secciones</span>
           </button>
-          <a href="/" title="Ir al inicio" className="header__logo">
+          <a href="/" title="Ir al inicio" className="header_logo">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -58,8 +59,8 @@ export const Header: React.FC = () => {
               </g>
             </svg>
           </a>
-          <div className="header__actions">
-            <div className="header__follow">
+          <div className="">
+            <div className="">
               <a
                 href="https://www.facebook.com/RevistaMOTOR"
                 title="Siguenos en Facebook"
@@ -187,7 +188,6 @@ export const Header: React.FC = () => {
                 </svg>
               </a>
             </div>
-          </div>
         </div>
       </div>
     </header>

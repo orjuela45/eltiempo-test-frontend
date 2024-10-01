@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { LittleCard } from '../components'
 import { ArticleInterface } from '../interfaces'
 import { ArticleService } from '../services'
+import '../styles/home.css'
 
 const Home = () => {
   const articleService = new ArticleService()
@@ -27,8 +28,8 @@ const Home = () => {
   }
 
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="home">
+
       {articles.map((article) => (
         <LittleCard article={article} />
       ))}
